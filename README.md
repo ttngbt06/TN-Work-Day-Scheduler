@@ -19,8 +19,8 @@ Why don't you try **"Work Day Scheduler"** application. This is your new and fre
 ## Screenshot
 This application will functionally like this
 
-![Mock Up Image](./Assets/Mock-Up-Image/MockUpChal5.gif)
+![Mock Up Image](./Assets/Image/MockUpChal5.gif)
 
 ## Link
 
-Are you ready? Let's browse *[Work Day Scheduler]()
+Are you ready? Let's browse **[Work Day Scheduler]()**
