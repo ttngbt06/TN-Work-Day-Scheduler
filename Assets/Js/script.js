@@ -12,8 +12,8 @@ $(".saveBtn").each(function () {
 
  // Apply past, present, future classes to time blocks
  timeblocks.each(function () {
-  const hour = this.id.split("-")[1];
-  const currentHour = dayjs().hour();
+  var hour = this.id.split("-")[1];
+  var currentHour = dayjs().hour();
   if (hour < currentHour) $(this).addClass("past");
   if (hour == currentHour) $(this).addClass("present");
   if (hour > currentHour) $(this).addClass("future");
@@ -31,17 +31,21 @@ $(".saveBtn").each(function () {
 
   // Save notes in local storage
   function saveNotes(btn) {
-    const parentElement = $(btn).parent();
-    const id = parentElement.attr("id");
-    const task = parentElement.find("textarea").val();
+    var parentElement = $(btn).parent();
+    var id = parentElement.attr("id");
+    var task = parentElement.find("textarea").val();
     console.log({ task });
     addToLocalStorage({ id, task });
+    $("#notification").css("display", "block");
+    setTimeout(() => {
+      $("#notification").css("display", "none");
+    }, 3000);
   }
 
   // Get the tasks back from localstorage then add it to the blocks
-  const timeblocks = $(".time-block");
+  var timeblocks = $(".time-block");
   timeblocks.each(function () {
-    const tasks = getFromLocalStorage(this.id);
+    var tasks = getFromLocalStorage(this.id);
     $(this)
       .find("textarea")
       .text(tasks || "");

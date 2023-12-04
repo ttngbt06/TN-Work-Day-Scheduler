@@ -20,6 +20,16 @@ header {
   border-top: 5px solid black;
 }
 
+#notification {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+.red {
+  color: red;
+}
+
 .description {
   white-space: pre-wrap;
 }
